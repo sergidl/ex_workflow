@@ -1,16 +1,12 @@
 name: test
  
-on: push
-  release:
-    types: [ created ]
+on:
   workflow_dispatch:
     inputs:
       message:
         description: 'message to display'
         required: true
         default: 'hello world'
-  schedule:
-    - cron: "*/5 * * * *"
 jobs:
   job1:
     name: a job 1
