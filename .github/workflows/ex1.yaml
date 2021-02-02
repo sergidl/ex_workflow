@@ -1,6 +1,6 @@
 name: testing
  
-on: [push]
+on: [pull_request]
 
 #  release:
 #    types: [ created ]
@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
  #     - name: step 1
-       - run: | echo "${{github.event.inputs.message}}"
+       - run:  echo '++++++++++++++++++++++++++++++++++++++'
 #      - name: step 2
-       - run: |
-          echo I insist: "${{github.event.inputs.message}}"
+#       - run: |
+#          echo I insist: "${{github.event.inputs.message}}"
