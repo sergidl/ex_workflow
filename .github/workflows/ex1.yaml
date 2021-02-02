@@ -9,8 +9,8 @@ on:
         description: 'message to display'
         required: true
         default: 'hello world'
-  schedule:
-    - cron: "*/5 * * * *"
+#  schedule:
+#    - cron: "*/5 * * * *"
  jobs:
   job1:
     name: a job 1
