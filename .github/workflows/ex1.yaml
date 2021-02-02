@@ -1,10 +1,24 @@
-name: learn-github-actions
-on: [pull-request]
-jobs:
-  check-bats-version:
+name: test
+ 
+on:
+  release:
+    types: [ created ]
+  workflow_dispatch:
+    inputs:
+      message:
+        description: 'message to display'
+        required: true
+        default: 'hello world'
+  schedule:
+    - cron: "*/5 * * * *"
+ jobs:
+  job1:
+    name: a job 1
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-      - run: npm install -g bats
-      - run: bats -v
+      - name: step 1
+        run: |
+          echo "${{github.event.inputs.message}}"
+      - name: step 2
+        run: |
+          echo I insist: "${{github.event.inputs.message}}"
