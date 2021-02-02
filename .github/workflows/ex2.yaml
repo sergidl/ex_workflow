@@ -1,6 +1,8 @@
 name: mail
 
 on:
+  workflow_dispatch:
+
 jobs:
   job-email:
     name: send-email
