@@ -1,7 +1,8 @@
 name: test
  
-on: [push]
-
+on:
+  release:
+    types: [ created ]
   workflow_dispatch:
     inputs:
       message:
