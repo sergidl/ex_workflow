@@ -1,6 +1,6 @@
 name: testing
  
-on:
+on: [pull]
   release:
     types: [ created ]
   workflow_dispatch:
