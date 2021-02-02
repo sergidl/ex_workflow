@@ -1,3 +1,6 @@
+name: mail
+
+on:
 jobs:
   job-email:
     name: send-email
