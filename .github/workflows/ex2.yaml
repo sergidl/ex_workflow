@@ -2,6 +2,15 @@ name: mail
 
 on:
   workflow_dispatch:
+    #inputs:
+    #  username:
+    #    description: 'mail'
+    #    required: true
+    #    default: '@gmail.com'
+    #  password:
+    #    description: 'password'
+    #    required: true
+    #    default: ''
 
 jobs:
   job-email:
@@ -31,4 +40,4 @@ jobs:
           # Optional converting Markdown to HTML (set content_type to text/html too):
           convert_markdown: true
           # Optional attachments:
-          attachments: attachments.zip,git.diff,./dist/static/main.js
+        #  attachments: attachments.zip,git.diff,./dist/static/main.js
