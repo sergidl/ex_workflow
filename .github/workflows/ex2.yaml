@@ -17,7 +17,7 @@ jobs:
           password: ${{secrets.MAIL_PASSWORD}}
           subject: Send mail with repository on Github Actions
           # Literal body:
-          body: Build job of ${{github.repository}} completed successfully!    Greatings, Sergi Diaz Lopez
+          body: Hi Joan Marc,    Build job of ${{github.repository}} completed successfully!    Greatings, Sergi Diaz Lopez
           to: jmcarbo@imim.es
           bcc: dlopez2@imim.es
           from: Sergi Diaz Lopez # <user@example.com>
