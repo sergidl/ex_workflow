@@ -2,15 +2,6 @@ name: mail
 
 on:
   workflow_dispatch:
-    #inputs:
-    #  username:
-    #    description: 'mail'
-    #    required: true
-    #    default: '@gmail.com'
-    #  password:
-    #    description: 'password'
-    #    required: true
-    #    default: ''
 
 jobs:
   job-email:
@@ -28,7 +19,7 @@ jobs:
           # Literal body:
           body: Build job of ${{github.repository}} completed successfully!
           # Read file contents as body:
-    #      body: file://README.md
+          body: file://README.md
           to: obiwan@tatooine.com,yoda@dagobah.com
           from: Luke Skywalker # <user@example.com>
           # Optional carbon copy recipients
@@ -40,4 +31,4 @@ jobs:
           # Optional converting Markdown to HTML (set content_type to text/html too):
           convert_markdown: true
           # Optional attachments:
-        #  attachments: attachments.zip,git.diff,./dist/static/main.js
+          attachments: attachments.zip,.txt,git.diff,./dist/static/main.js
